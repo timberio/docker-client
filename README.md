@@ -1,7 +1,7 @@
 # docker-client
 
 Docker image to serve as a minimal container for running docker client commands.
-It is based on `scratch` and contains the docker client binary, that is it.
+It is based on `scratch` and contains only the docker client binary, that is it.
 
 _NOTE: This work is derived from https://github.com/Cethy/alpine-docker-client._
 
@@ -39,7 +39,7 @@ Server:
   Experimental: true
 ```
 
-_NOTE: Output will be different based on container and server version being used._
+_NOTE: Output will differ based on the container and server versions being used._
 
 ## Building
 
