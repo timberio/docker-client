@@ -1,3 +1,7 @@
+# The Docker client binary is being redistributed within this container
+# under the Apache License 2.0.
+# https://github.com/kubernetes/kubernetes/blob/master/LICENSE
+
 # Based on https://github.com/Cethy/alpine-docker-client/blob/master/Dockerfile
 FROM alpine:3.7 as downloader
 

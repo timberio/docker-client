@@ -1,4 +1,4 @@
-# docker-client-scratch
+# docker-client
 
 Docker image to serve as a minimal container for running docker client commands.
 It is based on `scratch` and contains the docker client binary, that is it.
@@ -12,7 +12,9 @@ _NOTE: This work is derived from https://github.com/Cethy/alpine-docker-client._
 ## Usage
 
 ```bash
-docker run -v /var/run/docker.sock:/var/run/docker.sock docker-client-scratch version
+docker run \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  timberio/docker-client version
 ```
 
 ```text
@@ -41,16 +43,16 @@ _NOTE: Output will be different based on container and server version being used
 
 ## Building
 
-To build the image with a different Docker version:
+To build the image with a different Docker client version:
 
 ```bash
-docker build --build-arg DOCKER_CLI_VERSION="17.06.0" -t my-docker-client-scratch .
+docker build --build-arg DOCKER_CLI_VERSION="17.06.0" -t my-docker-client .
 ```
 
-Running the container will output the Docker version:
+Running the container will output the Docker client version:
 
 ```bash
-docker run my-docker-client-scratch
+docker run my-docker-client
 ```
 
 ```text
@@ -71,7 +73,7 @@ to run the `docker` commands, everything is good.
 
 Releasing a new version involves two steps: building and pushing. To build the
 new image, you issue a build command with the appropriate tag. The tag follows
-the format `timberio/docker-client-scratch:$(version)`.
+the format `timberio/docker-client:$(version)`.
 
 The `$(version)` should be the version of the Docker client.
 
@@ -89,7 +91,8 @@ docker push TAG
 ```
 
 replacing TAG with the appropriate tag. Note that in order to do this you must
-be logged in and have write permissions on the timberio/docker-client-scratch image in
+be logged in and have write permissions on the timberio/docker-client image in
 DockerHub.
 
-_NOTE: All stable versions of the Docker client can be built and released by running the `release.sh` script._
+_NOTE: All stable versions of the Docker client can be built and released by running
+the `release.sh` script._

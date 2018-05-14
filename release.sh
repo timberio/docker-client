@@ -15,11 +15,11 @@ latest=$(wc -l < VERSIONS.txt | awk '{$1=$1};1')
 for version in $(cat VERSIONS.txt); do
 	(( count++ ))
 
-	docker build --build-arg DOCKER_CLI_VERSION="$version" -t timberio/docker-client-scratch:$version .
-	docker push timberio/docker-client-scratch:$version
+	docker build --build-arg DOCKER_CLI_VERSION="$version" -t timberio/docker-client:$version .
+	docker push timberio/docker-client:$version
 
 	if [[ $count == $latest ]]; then
-		docker tag timberio/docker-client-scratch:$version timberio/docker-client-scratch:latest
-		docker push timberio/docker-client-scratch:latest
+		docker tag timberio/docker-client:$version timberio/docker-client:latest
+		docker push timberio/docker-client:latest
 	fi
 done
