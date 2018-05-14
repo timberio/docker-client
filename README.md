@@ -17,21 +17,24 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock docker-client-scratch ve
 
 ```text
 Client:
- Version:      17.03.0-ce
- API version:  1.26
- Go version:   go1.7.5
- Git commit:   3a232c8
- Built:        Tue Feb 28 07:52:04 2017
+ Version:      18.03.1-ce
+ API version:  1.37
+ Go version:   go1.9.2
+ Git commit:   9ee9f40
+ Built:        Thu Apr 26 07:12:25 2018
  OS/Arch:      linux/amd64
+ Experimental: false
+ Orchestrator: swarm
 
 Server:
- Version:      18.03.1-ce
- API version:  1.37 (minimum version 1.12)
- Go version:   go1.9.5
- Git commit:   9ee9f40
- Built:        Thu Apr 26 07:22:38 2018
- OS/Arch:      linux/amd64
- Experimental: true
+ Engine:
+  Version:      18.03.1-ce
+  API version:  1.37 (minimum version 1.12)
+  Go version:   go1.9.5
+  Git commit:   9ee9f40
+  Built:        Thu Apr 26 07:22:38 2018
+  OS/Arch:      linux/amd64
+  Experimental: true
 ```
 
 _NOTE: Output will be different based on container and server version being used._

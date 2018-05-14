@@ -1,7 +1,7 @@
 # Based on https://github.com/Cethy/alpine-docker-client/blob/master/Dockerfile
 FROM alpine:3.7 as downloader
 
-ARG DOCKER_CLI_VERSION="17.03.0-ce"
+ARG DOCKER_CLI_VERSION="18.03.1-ce"
 ENV DOWNLOAD_URL="https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_CLI_VERSION.tgz"
 
 # install docker client
