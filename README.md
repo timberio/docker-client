@@ -89,4 +89,4 @@ replacing TAG with the appropriate tag. Note that in order to do this you must
 be logged in and have write permissions on the timberio/docker-client-scratch image in
 DockerHub.
 
-All stable versions of the Docker client can be built and released by running the `release.sh` script.
+_NOTE: All stable versions of the Docker client can be built and released by running the `release.sh` script._
